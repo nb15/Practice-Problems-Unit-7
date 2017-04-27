@@ -6,10 +6,12 @@ factorial(4) is 4 * 3 * 2 * 1. Another way to think of that is factorial (4) = 4
 
 def factorial(num):
 	'''Takes in integer input from user and returns interger's factorial.'''
-	for int in range(num):
-		if num == 0: # terminating case
-			return 1
-		else:
-			num * factorial(num - 1)
+	if num == 0: # terminating case
+		return 1
+		
+	else:
+		return num * factorial(num - 1)
 
 # ––––––––––––––––––––––Main Program–––––––––––––––––––––––––
+print("The factorial of 14 is : {}".format(factorial(14)))
+print("The factorial of 8 is : {}".format(factorial(8)))
